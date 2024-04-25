@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">AdminDo</h1>
+    <p class="text-center ">AdminDo es una aplicación de administracion de tareas y clientes</p>
+    <hr>
+    <p class="text-center fw-bold">Seleccione alguna de las siguientes opciones para continuar</p>
+
+    </section>
+    
+    <div class="text-center">
+        <a class="btn btn-primary" href="/tasks/create">
+            Crear Venta
+        </a>
+        <a class="btn btn-primary" href="clientes/create">
+            Crear Cliente
+        </a>
+    </div>
+
+</main>
+
+{% endblock %}

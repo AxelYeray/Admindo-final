@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">AdminDo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+           
+
+            {% if user.is_authenticated %}
+            <li>
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/tasks" class="nav-link">Ventas Pendientes</a>
+            </li>
+            <li class="nav-item">
+                <a href="/tasks/completed" class="nav-link">Ventas completadas</a>
+            </li>
+            <li class="nav-item">
+                <a href="/tasks/create" class="nav-link">Crear venta</a>
+            </li>
+            <li class="nav-item">
+                <a href="/clientes" class="nav-link">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a href="/clientes/create" class="nav-link">Crear Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a href="/clientes/completed" class="nav-link">Clientes completados</a>
+            </li>
+            <li class="nav-item">
+                <a href="logout/" class="nav-link">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="signin/" class="nav-link">Log In</a>
+            </li>
+            <li class="nav-item">
+                <a href="/register/" class="nav-link">Register</a>
+            </li>
+            {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>

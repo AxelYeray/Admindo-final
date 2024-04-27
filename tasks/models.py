@@ -1,16 +1,15 @@
-
 from django.db import models
 from django.contrib.auth.models import User
 
 
 # Create your models here.
 class Task(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField(blank=True)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
     created = models.DateTimeField(auto_now_add=True)
     datecompleted = models.DateTimeField(null=True, blank=True)
-    important = models.BooleanField(default=False)
+    importante = models.BooleanField(default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -23,7 +22,6 @@ class Cliente(models.Model):
     calle = models.CharField(max_length=100)
     colonia = models.CharField(max_length=100)
     celular = models.CharField(max_length=100)
-    folio = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     datecompleted = models.DateTimeField(null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -5,7 +5,14 @@ from .models import Cliente
 class ClienteForm(forms.ModelForm):
     class Meta:
         model = Cliente
-        fields = ["nombre", "apellido", "calle", "colonia", "celular", "folio","important"]
+        fields = [
+            "nombre",
+            "apellido",
+            "calle",
+            "colonia",
+            "celular",
+            "important",
+        ]
         widgets = {
             "nombre": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Nombre"}
@@ -21,9 +28,6 @@ class ClienteForm(forms.ModelForm):
             ),
             "celular": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Celular"}
-            ),
-            "folio": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Folio"}
             ),
             "important": forms.CheckboxInput(
                 attrs={"class": "form-check-input md-auto"}

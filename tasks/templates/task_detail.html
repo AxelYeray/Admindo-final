@@ -4,7 +4,8 @@
 <main class="container">
     <div class="row">
         <div class="text-secondary" class="col-md-4 offset-md-4">
-                <h1>{{ task.title }}</h1>
+                <h1>{{ task.nombre }}</h1>
+                <p>{{ task.id }}</p>
     
 
                 {{error}}
@@ -15,7 +16,7 @@
                     {{form.as_p}}
                   
                     <button class="btn btn-primary">
-                      Update
+                      Editar venta
                     </button>
                   </form>
 
@@ -24,14 +25,14 @@
 
                     {% csrf_token %}
                     <button class="btn btn-secondary">
-                      complete
+                      completado
                     </button>
                   </form>
                   
                   <form action="{% url 'delete_task' task.id %}" method="POST">
                     {% csrf_token %}
                     <button class="btn btn-danger">
-                      delete
+                      Baja venta
                     </button>
                   </form>
                   

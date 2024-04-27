@@ -5,16 +5,16 @@ from .models import Task
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ["title", "description", "important", "price"]
+        fields = ["nombre", "descripcion", "importante", "total"]
         widgets = {
-            "title": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Titulo"}
+            "nombre": forms.TextInput(
+                attrs={"class": "form-control", "placeholder": "Cliente nombre"}
             ),
-            "description": forms.Textarea(
+            "descripcion": forms.Textarea(
                 attrs={"class": "form-control", "placeholder": "Descripción"}
             ),
-            "important": forms.CheckboxInput(
+            "importante": forms.CheckboxInput(
                 attrs={"class": "form-check-input md-auto"}
             ),
-            "price": forms.NumberInput(attrs={"class": "form-control"}),
+            "total": forms.NumberInput(attrs={"class": "form-control"}),
         }

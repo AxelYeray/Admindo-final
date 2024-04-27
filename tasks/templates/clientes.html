@@ -4,7 +4,7 @@
 <main class="container">
     <div class="row">
         <div class="col-md-6 offset-md-4">
-            <h1 class="text-center display-3 py-5">Clientes Pendientes</h1>
+            <h1 class="text-center display-3 py-5">Clientes</h1>
 
     <ul class="list-group">
         {% for cliente in clientes %}
@@ -15,7 +15,7 @@
                 {% else %}
                 <h1 class="fw-bold">{{ cliente.nombre }}</h1>
                 {% endif %}
-                <p>{{ cliente.folio }}</p>
+                <p>id: {{ cliente.id }}</p>
                 <p>{{ cliente.user.username }}</p>
              </header>
                 <p>{{ cliente.datecompleted|date:'M j Y:i' }}</p>
